@@ -259,6 +259,38 @@
             fill: #FFD700;
         }
 
+        /* Center common card types across the site
+           Ensures card blocks are horizontally centered and
+           inner flex layouts align content centrally. */
+        .feature-card,
+        .problem-card,
+        .ingredient-card,
+        .trust-card,
+        .support-card,
+        .site-card,
+        .testimonial-card,
+        .faq-card,
+        .mechanism-step .content-card,
+        .mechanism-step .content-card-left {
+            margin-left: auto;
+            margin-right: auto;
+            display: block;
+            text-align: center;
+        }
+
+        /* Ensure common inner flex containers center their children */
+        .feature-card > .flex,
+        .problem-card > .flex,
+        .support-card > .flex,
+        .trust-card > .flex,
+        .site-card > .flex,
+        .testimonial-card > .flex,
+        .mechanism-step .content-card > .flex,
+        .mechanism-step .content-card-left > .flex {
+            justify-content: center;
+            align-items: center;
+        }
+
         .quote-icon {
             opacity: 0.08;
         }
@@ -272,6 +304,7 @@
 
         /* Reusable site card to match testimonial / feature styling */
         .site-card {
+            width:65%;
             background: linear-gradient(180deg, rgba(255, 255, 255, 0.96), rgba(255, 255, 255, 0.92));
             border-radius: 1rem;
             box-shadow: 0 12px 30px rgba(26, 26, 26, 0.08);
@@ -405,6 +438,7 @@
         .feature-card {
             clip-path: polygon(5% 0%, 100% 0%, 100% 95%, 95% 100%, 0% 100%, 0% 5%);
             position: relative;
+            width: 65%;
             overflow: hidden;
             animation: slideInUp 0.6s cubic-bezier(0.34, 1.56, 0.64, 1) forwards;
             opacity: 0;
@@ -1103,7 +1137,7 @@
                 <!-- Hero Image Container -->
                 <div class="relative w-full hero-image-container ">
                     <div class="w-full overflow-hidden shadow-2xl">
-                        <img src="./Image/Hero.png" alt="Ear Care Hero Image"
+                        <img src="./Image/Hero.avif" alt="Ear Care Hero Image"
                             class="w-full h-auto object-contain hero-image transition-all duration-700 ease-out">
                     </div>
                 </div>
@@ -1174,14 +1208,14 @@
                 <!-- Section Header -->
                 <header class="text-center bg-secondry pt-10 pb-6 px-6 relative z-10">
 
-                    <h2 class="text-3xl font-bold text-white mb-2 leading-tight">बहरापन क्यों होता
+                    <h2 class="text-3xl font-bold text-white mb-2  leading-tight">बहरापन क्यों होता
                         है?</h2>
                 </header>
 
                 <!-- Introduction Text -->
                 <article
                     class="mx-6 mb-6 bg-secondry backdrop-blur-md rounded-3xl p-5 border-2 border-white border-opacity-20 relative z-10">
-                    <p class="text-white leading-relaxed text-base">
+                    <p class="text-white leading-relaxed text-xl">
                         बहरापन अचानक नहीं होता। यह धीरे-धीरे कान के अंदर damage से शुरू होता है:
                     </p>
                 </article>
@@ -1197,7 +1231,7 @@
                         <div class="flex items-center gap-4 p-5">
                             <div class="flex-shrink-0 w-30 rounded-2xl overflow-hidden shadow-md transition-transform duration-300 hover:rotate-2"
                                 style="background-color: var(--primary-08);">
-                                <img src="./Image/Problem1.png" alt="Infection" class="w-full h-full object-cover">
+                                <img src="./Image/Problem1.avif" alt="Infection" class="w-full h-full object-cover">
                             </div>
                             <div class="flex-1">
                                 <div class="flex items-center gap-2 mb-1">
@@ -1207,7 +1241,7 @@
                                             d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 15h-2v-2h2v2zm0-4h-2V7h2v6z" />
                                     </svg>
                                     <p
-                                        class="text-gray-800 font-bold text-xl transition-colors duration-300 hover:text-gray-900">
+                                        class="text-gray-800 font-bold text-xl transition-colors duration-300 text-left hover:text-gray-900">
                                         कान के अंदर बार-बार infection</p>
                                 </div>
                             </div>
@@ -1223,7 +1257,7 @@
                         <div class="flex items-center gap-4 p-5">
                             <div class="flex-shrink-0 w-30 rounded-2xl overflow-hidden shadow-md"
                                 style="background-color: var(--primary-08);">
-                                <img src="./Image/Problem2.png" alt="Swelling" class="w-full h-full object-cover">
+                                <img src="./Image/Problem2.avif" alt="Swelling" class="w-full h-full object-cover">
                             </div>
                             <div class="flex-1">
                                 <div class="flex items-center gap-2 mb-1">
@@ -1231,7 +1265,7 @@
                                         <path
                                             d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 15h-2v-2h2v2zm0-4h-2V7h2v6z" />
                                     </svg>
-                                    <p class="text-gray-800 font-bold text-xl">सूजन और fluid build-up</p>
+                                    <p class="text-gray-800 font-bold text-left text-xl">सूजन और fluid build-up</p>
                                 </div>
                             </div>
                         </div>
@@ -1245,7 +1279,7 @@
                         <div class="flex items-center gap-4 p-5">
                             <div class="flex-shrink-0 w-30 rounded-2xl overflow-hidden shadow-md"
                                 style="background-color: var(--primary-08);">
-                                <img src="./Image/Problem3.png" alt="Nerve Weakness" class="w-full h-full object-cover">
+                                <img src="./Image/Problem3.avif" alt="Nerve Weakness" class="w-full h-full object-cover">
                             </div>
                             <div class="flex-1">
                                 <div class="flex items-center gap-2 mb-1">
@@ -1253,7 +1287,7 @@
                                         <path
                                             d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 15h-2v-2h2v2zm0-4h-2V7h2v6z" />
                                     </svg>
-                                    <p class="text-gray-800 font-bold text-base">hearing nerves का कमजोर होना</p>
+                                    <p class="text-gray-800 font-bold text-left text-xl">hearing nerves का कमजोर होना</p>
                                 </div>
                             </div>
                         </div>
@@ -1267,7 +1301,7 @@
                         <div class="flex items-center gap-4 p-5">
                             <div class="flex-shrink-0 w-30 rounded-2xl overflow-hidden shadow-md"
                                 style="background-color: var(--primary-08);">
-                                <img src="./Image/Problem4.png" alt="Signal Disruption"
+                                <img src="./Image/Problem4.avif" alt="Signal Disruption"
                                     class="w-full h-full object-cover">
                             </div>
                             <div class="flex-1">
@@ -1276,7 +1310,7 @@
                                         <path
                                             d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 15h-2v-2h2v2zm0-4h-2V7h2v6z" />
                                     </svg>
-                                    <p class="text-gray-800 font-bold text-base">sound signals का brain तक ठीक से न
+                                    <p class="text-gray-800 font-bold text-left text-xl">sound signals का brain तक ठीक से न
                                         पहुँचना</p>
                                 </div>
                             </div>
@@ -1291,7 +1325,7 @@
                         <div class="flex items-center gap-4 p-5">
                             <div class="flex-shrink-0 w-30 rounded-2xl overflow-hidden shadow-md"
                                 style="background-color: var(--primary-08);">
-                                <img src="./Image/Problem5.png" alt="Signal Disruption"
+                                <img src="./Image/Problem5.avif" alt="Signal Disruption"
                                     class="w-full h-full object-cover">
                             </div>
                             <div class="flex-1">
@@ -1300,7 +1334,7 @@
                                         <path
                                             d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 15h-2v-2h2v2zm0-4h-2V7h2v6z" />
                                     </svg>
-                                    <p class="text-gray-800 font-bold text-xl">कान के अंदर wax और गंदगी का ज़्यादा जमना
+                                    <p class="text-gray-800 font-bold text-left text-xl">कान के अंदर wax और गंदगी का ज़्यादा जमना
                                     </p>
                                 </div>
                             </div>
@@ -1315,7 +1349,7 @@
                         <div class="flex items-center gap-4 p-5">
                             <div class="flex-shrink-0 w-30 rounded-2xl overflow-hidden shadow-md"
                                 style="background-color: var(--primary-08);">
-                                <img src="./Image/Problem6.png" alt="Signal Disruption"
+                                <img src="./Image/Problem6.avif" alt="Signal Disruption"
                                     class="w-full h-full object-cover">
                             </div>
                             <div class="flex-1">
@@ -1324,7 +1358,7 @@
                                         <path
                                             d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 15h-2v-2h2v2zm0-4h-2V7h2v6z" />
                                     </svg>
-                                    <p class="text-gray-800 font-bold text-base">तेज़ आवाज़ का लगातार असर</p>
+                                    <p class="text-gray-800 font-bold text-left text-xl">तेज़ आवाज़ का लगातार असर</p>
                                 </div>
                             </div>
                         </div>
@@ -1347,8 +1381,8 @@
                                 <path d="M1 21h22L12 2 1 21zm12-3h-2v-2h2v2zm0-4h-2v-4h2v4z" />
                             </svg>
                             <div>
-                                <p class="text-white font-bold text-lg mb-2">👉 ये सभी कारण मिलकर</p>
-                                <p class="text-white text-base leading-relaxed">
+                                <p class="text-white font-bold text-xl mb-2">👉 ये सभी कारण मिलकर</p>
+                                <p class="text-white text-lg leading-relaxed">
                                     बहरापन को permanent बना सकते हैं।
                                 </p>
                             </div>
@@ -1364,7 +1398,7 @@
                             <path
                                 d="M11 7h2v2h-2zm0 4h2v6h-2zm1-9C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 18c-4.41 0-8-3.59-8-8s3.59-8 8-8 8 3.59 8 8-3.59 8-8 8z" />
                         </svg>
-                        <p class="text-white font-bold text-sm">समय रहते सही कदम उठाएं</p>
+                        <p class="text-white font-bold text-base">समय रहते सही कदम उठाएं</p>
                     </div>
                 </div>
 
@@ -1375,7 +1409,7 @@
                 style="background: linear-gradient(135deg, var(--coral-primary) 0%, var(--primary) 50%, var(--light) 100%);">
 
                 <!-- Floating Background Elements -->
-                <div class="absolute top-20 left-12 floating-element" style="animation-delay: 0s;">
+                <div class="absolute top-15 left-35 floating-element" style="animation-delay: 0s;">
                     <svg class="w-40 h-40" style="color: var(--text-light);" fill="currentColor" viewBox="0 0 24 24">
                         <path
                             d="M17 20c-.29 0-.56-.06-.76-.15-.71-.37-1.21-.88-1.71-2.38-.51-1.56-1.47-2.29-2.39-3-.79-.61-1.61-1.24-2.32-2.53C9.29 10.98 9 9.93 9 9c0-2.8 2.2-5 5-5s5 2.2 5 5h2c0-3.93-3.07-7-7-7S7 5.07 7 9c0 1.26.38 2.65 1.07 3.9.91 1.65 1.98 2.48 2.85 3.15.81.62 1.39 1.07 1.71 2.05.6 1.82 1.37 2.84 2.73 3.55.51.23 1.07.35 1.64.35 2.21 0 4-1.79 4-4h-2c0 1.1-.9 2-2 2z" />
@@ -1417,7 +1451,7 @@
                     <!-- Hero Poster Image -->
                     <div class="mb-12 md:mb-16 rounded-3xl overflow-hidden poster-reveal"
                         style="box-shadow: 0 25px 60px rgba(0, 0, 0, 0.4);">
-                        <img src="./Image/Intro.png" alt="Ear Care Capsule Introduction"
+                        <img src="./Image/Intro.avif" alt="Ear Care Capsule Introduction"
                             class="w-full h-auto object-cover" style="max-height: 450px; object-fit: cover;">
                     </div>
 
@@ -1445,16 +1479,12 @@
                             onclick="createRipple(event, this)">
                             <div class="card-icon mx-auto mb-5 rounded-full p-6"
                                 style="width: 120px; height: 120px; background: linear-gradient(135deg, var(--coral-primary) 0%, var(--primary) 50%, var(--light) 100%);">
-                                <svg class="w-full h-full" style="color: var(--text-light);" fill="currentColor"
-                                    viewBox="0 0 24 24">
-                                    <path
-                                        d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z" />
-                                </svg>
+                                <img src="./Image/herbal.avif" class="w-98" alt="">
                             </div>
                             <h3 class="text-lg font-bold mb-2 text-center" style="color: var(--success);">
                                 100% Ayurvedic Formula
                             </h3>
-                            <p class="text-sm text-center leading-relaxed" style="color: var(--text-dark);">
+                            <p class="text-base text-center leading-relaxed" style="color: var(--text-dark);">
                                 प्राकृतिक जड़ी-बूटियों से बना
                             </p>
                         </article>
@@ -1464,17 +1494,14 @@
                             class="feature-card ripple-container cursor-pointer transition-all duration-300 ease-in-out hover:scale-[1.03] hover:shadow-2xl hover:ring-2 hover:ring-white/30 active:scale-[0.96] focus:outline-none focus:ring-2 focus:ring-white/50 p-6"
                             style="background-color: var(--text-light);" tabindex="0"
                             onclick="createRipple(event, this)">
-                            <div class="card-icon mx-auto mb-5 rounded-full p-6"
+                            <div class="card-icon mx-auto mb-5 rounded-full"
                                 style="width: 120px; height: 120px; background: linear-gradient(135deg, var(--primary) 0%, var(--secondary) 100%);">
-                                <svg class="w-full h-full" style="color: var(--text-light);" fill="currentColor"
-                                    viewBox="0 0 24 24">
-                                    <path d="M12 2L4.5 20.29l.71.71L12 18l6.79 3 .71-.71z" />
-                                </svg>
+                                <img src="./Image/ear.avif" class="rounded-full" alt="">
                             </div>
                             <h3 class="text-lg font-bold mb-2 text-center" style="color: var(--primary);">
                                 Root-Level पर काम
                             </h3>
-                            <p class="text-sm text-center leading-relaxed" style="color: var(--text-dark);">
+                            <p class="text-base text-center leading-relaxed" style="color: var(--text-dark);">
                                 समस्या की जड़ तक पहुंचता है
                             </p>
                         </article>
@@ -1484,18 +1511,14 @@
                             class="feature-card ripple-container cursor-pointer transition-all duration-300 ease-in-out hover:scale-[1.03] hover:shadow-2xl hover:ring-2 hover:ring-white/30 active:scale-[0.96] focus:outline-none focus:ring-2 focus:ring-white/50 p-6"
                             style="background-color: var(--text-light);" tabindex="0"
                             onclick="createRipple(event, this)">
-                            <div class="card-icon mx-auto mb-5 rounded-full p-6"
+                            <div class="card-icon mx-auto mb-5 rounded-full"
                                 style="width: 120px; height: 120px; background: linear-gradient(135deg, var(--coral-primary) 0%, var(--secondary) 100%);">
-                                <svg class="w-full h-full" style="color: var(--text-light);" fill="currentColor"
-                                    viewBox="0 0 24 24">
-                                    <path
-                                        d="M12 1L3 5v6c0 5.55 3.84 10.74 9 12 5.16-1.26 9-6.45 9-12V5l-9-4zm0 10.99h7c-.53 4.12-3.28 7.79-7 8.94V12H5V6.3l7-3.11v8.8z" />
-                                </svg>
+                                <img src="./Image/support.avif" alt="">
                             </div>
                             <h3 class="text-lg font-bold mb-2 text-center" style="color: var(--coral-primary);">
                                 Complete Support
                             </h3>
-                            <p class="text-sm text-center leading-relaxed" style="color: var(--text-dark);">
+                            <p class="text-base text-center leading-relaxed" style="color: var(--text-dark);">
                                 Infection, सूजन और नसों को सहारा
                             </p>
                         </article>
@@ -1537,14 +1560,12 @@
                 <!-- Section Header -->
                 <header class="text-center bg-secondry pt-10 pb-6 px-6 relative z-10">
                     <h2 class="text-3xl font-bold text-white mb-3">How It Works</h2>
-                    <p class="text-white text-opacity-90 text-base">Ear Care Capsule बहरापन पर<br>3 स्तरों पर काम करती
+                    <p class="text-white text-opacity-90 text-xl">Ear Care Capsule बहरापन पर<br>3 स्तरों पर काम करती
                         है:</p>
                 </header>
 
                 <!-- Flow-Based Interactive Cards -->
                 <div class="px-6 pb-8">
-
-
 
                     <!-- Step 1: Infection Control -->
                     <article class="mb-4 mechanism-step">
@@ -1555,7 +1576,7 @@
                                     tabindex="0" onclick="handleStepClick(this, 1)">
                                     <div class="w-full h-full rounded-full overflow-hidden"
                                         style="background-color: var(--primary-08);">
-                                        <img src="./Image/Benifit1.png" alt="Infection Control"
+                                        <img src="./Image/Benifit1.avif" alt="Infection Control"
                                             class="w-full h-full object-cover">
                                     </div>
                                 </div>
@@ -1569,7 +1590,7 @@
                             <div class="flex-1 bg-white rounded-r-3xl rounded-tl-3xl ml-4 p-5 shadow-lg cursor-pointer transition-all duration-300 ease-in-out hover:translate-x-1 hover:shadow-2xl active:translate-x-0 focus:ring-2 focus:ring-white/60 focus:outline-none ripple-effect click-feedback content-card"
                                 tabindex="0" onclick="handleStepClick(this, 1)">
                                 <h3 class="font-bold text-lg mb-2" style="color: var(--primary);">Infection Control</h3>
-                                <p class="text-gray-700 text-sm leading-relaxed">
+                                <p class="text-gray-700 text-base leading-relaxed">
                                     कान के अंदर बढ़ रहे bacteria और fungus को नियंत्रित करके बहरापन बढ़ने से रोकने में
                                     मदद।
                                 </p>
@@ -1591,7 +1612,7 @@
                                     tabindex="0" onclick="handleStepClick(this, 2)">
                                     <div class="w-full h-full rounded-full overflow-hidden"
                                         style="background-color: var(--primary-08);">
-                                        <img src="./Image/Benifit2.png" alt="Inflammation Reduction"
+                                        <img src="./Image/Benifit2.avif" alt="Inflammation Reduction"
                                             class="w-full h-full object-cover">
                                     </div>
                                 </div>
@@ -1606,7 +1627,7 @@
                                 tabindex="0" onclick="handleStepClick(this, 2)">
                                 <h3 class="font-bold text-lg mb-2" style="color: var(--primary);">Inflammation Reduction
                                 </h3>
-                                <p class="text-gray-700 text-sm leading-relaxed">
+                                <p class="text-gray-700 text-base leading-relaxed">
                                     सूजन, भारीपन और जलन को शांत करके बहरापन के कारणों को कम करता है।
                                 </p>
                             </div>
@@ -1627,7 +1648,7 @@
                                     tabindex="0" onclick="handleStepClick(this, 3)">
                                     <div class="w-full h-full rounded-full overflow-hidden"
                                         style="background-color: var(--primary-08);">
-                                        <img src="./Image/Benifit3.png" alt="Hearing Nerve Support"
+                                        <img src="./Image/Benifit3.avif" alt="Hearing Nerve Support"
                                             class="w-full h-full object-cover">
                                     </div>
                                 </div>
@@ -1642,7 +1663,7 @@
                                 tabindex="0" onclick="handleStepClick(this, 3)">
                                 <h3 class="font-bold text-lg mb-2" style="color: var(--primary);">Hearing Nerve Support
                                 </h3>
-                                <p class="text-gray-700 text-sm leading-relaxed">
+                                <p class="text-gray-700 text-base leading-relaxed">
                                     कमज़ोर होती नसों को पोषण देकर बहरापन में hearing clarity सुधारने में सहायता।
                                 </p>
                             </div>
@@ -1681,9 +1702,9 @@
                                 <path
                                     d="M12 2L2 7v10c0 5.55 3.84 10.74 9 12 5.16-1.26 9-6.45 9-12V7L12 2zm-1 15l-4-4 1.41-1.41L10 14.17l6.59-6.59L18 9l-9 9z" />
                             </svg>
-                            <p class="text-white font-bold text-base">वैज्ञानिक रूप से समर्थित</p>
+                            <p class="text-white font-bold text-lg">वैज्ञानिक रूप से समर्थित</p>
                         </div>
-                        <p class="text-white text-opacity-90 text-xs">3-स्तरीय क्रिया प्रणाली</p>
+                        <p class="text-white text-opacity-90 text-base">3-स्तरीय क्रिया प्रणाली</p>
                     </div>
                 </div>
 
@@ -1706,7 +1727,7 @@
                 <!-- Poster Image - Hero Visual -->
                 <div class="px-6 mb-8">
                     <div class="image-frame bg-white rounded-4xl shadow-2xl overflow-hidden">
-                        <img src="./Image/Doctor.png" alt="Ayurveda Understanding" class="w-full h-auto object-cover">
+                        <img src="./Image/Doctor.avif" alt="Ayurveda Understanding" class="w-full h-auto object-cover">
                     </div>
                 </div>
 
@@ -1746,8 +1767,8 @@
                                 </svg>
                             </div>
                             <div class="flex-1">
-                                <p class="text-gray-800 font-bold text-lg mb-1">मृदु प्रभाव वाली होती हैं</p>
-                                <p class="text-gray-600 text-sm">शरीर के लिए सौम्य और प्राकृतिक</p>
+                                <p class="text-gray-800 font-bold text-lg mb-1 text-left">मृदु प्रभाव वाली होती हैं</p>
+                                <p class="text-gray-600 text-base text-left">शरीर के लिए सौम्य और प्राकृतिक</p>
                             </div>
                         </div>
                     </article>
@@ -1763,8 +1784,8 @@
                                 </svg>
                             </div>
                             <div class="flex-1">
-                                <p class="text-gray-800 font-bold text-lg mb-1">long-term use के लिए safe</p>
-                                <p class="text-gray-600 text-sm">लंबे समय तक उपयोग के लिए सुरक्षित</p>
+                                <p class="text-gray-800 font-bold text-lg text-left mb-1">long-term use के लिए safe</p>
+                                <p class="text-gray-600 text-base text-left">लंबे समय तक उपयोग के लिए सुरक्षित</p>
                             </div>
                         </div>
                     </article>
@@ -1780,12 +1801,11 @@
                                 </svg>
                             </div>
                             <div class="flex-1">
-                                <p class="text-gray-800 font-bold text-lg mb-1">natural healing को support</p>
-                                <p class="text-gray-600 text-sm">बहरापन में कान और नसों की प्राकृतिक healing</p>
+                                <p class="text-gray-800 font-bold text-lg text-left mb-1">natural healing को support</p>
+                                <p class="text-gray-600 text-base text-left">बहरापन में कान और नसों की प्राकृतिक healing</p>
                             </div>
                         </div>
                     </article>
-
                 </div>
 
                 <!-- Trust Footer -->
@@ -1798,7 +1818,7 @@
                             </svg>
                             <p class="text-white font-bold text-lg">आयुर्वेद प्रमाणित</p>
                         </div>
-                        <p class="text-white text-opacity-90 text-sm">प्राचीन ज्ञान और आधुनिक विज्ञान का संगम</p>
+                        <p class="text-white text-opacity-90 text-base">प्राचीन ज्ञान और आधुनिक विज्ञान का संगम</p>
                     </div>
                 </div>
 
@@ -1847,7 +1867,7 @@
                             <div class="image-container  mx-auto mb-5"
                                 style="width: 140px; background: linear-gradient(135deg, var(--coral-light) 0%, var(--light) 100%);">
                                 <div class="w-full h-full flex items-center justify-center p">
-                                    <img src="./Image/Ind1.png" alt="वाचा" class="w-full rounded-xl object-top">
+                                    <img src="./Image/Ind1.avif" alt="वाचा" class="w-full rounded-xl object-top">
                                 </div>
                             </div>
                             <h3 class="text-xl font-bold mb-2 text-center" style="color: var(--primary);">
@@ -1863,7 +1883,7 @@
                             <div class="image-container mx-auto mb-5"
                                 style="width: 140px; background: linear-gradient(135deg, var(--coral-light) 0%, var(--light) 100%);">
                                 <div class="w-full h-full flex items-center justify-center">
-                                    <img src="./Image/Ind2.png" alt="हरितकी" class="w-full rounded-xl object-top">
+                                    <img src="./Image/Ind2.avif" alt="हरितकी" class="w-full rounded-xl object-top">
                                 </div>
                             </div>
                             <h3 class="text-xl font-bold mb-2 text-center" style="color: var(--secondary);">
@@ -1879,7 +1899,7 @@
                             <div class="image-container mx-auto mb-5"
                                 style="width: 140px;  background: linear-gradient(135deg, var(--coral-light) 0%, var(--light) 100%);">
                                 <div class="w-full h-full flex items-center justify-center">
-                                    <img src="./Image/Ind3.png" alt="पिप्पली" class="w-full  rounded-xl object-top">
+                                    <img src="./Image/Ind3.avif" alt="पिप्पली" class="w-full  rounded-xl object-top">
                                 </div>
                             </div>
                             <h3 class="text-xl font-bold mb-2 text-center" style="color: var(--accent);">
@@ -1895,7 +1915,7 @@
                             <div class="image-container mx-auto mb-5 "
                                 style="width: 140px; background: linear-gradient(135deg, var(--coral-light) 0%, var(--light) 100%);">
                                 <div class="w-full h-full flex items-center justify-center">
-                                    <img src="./Image/Ind4.png" alt="नीम" class="w-full rounded-xl object-top">
+                                    <img src="./Image/Ind4.avif" alt="नीम" class="w-full rounded-xl object-top">
                                 </div>
                             </div>
                             <h3 class="text-xl font-bold mb-2 text-center" style="color: var(--purple-dark);">
@@ -1995,7 +2015,7 @@
                                 </svg>
                                 <div>
                                     <p class="text-gray-800 font-bold text-base">Special introductory price</p>
-                                    <p class="text-gray-600 text-sm">सीमित समय के लिए</p>
+                                    <p class="text-gray-600 text-base">सीमित समय के लिए</p>
                                 </div>
                             </div>
                         </article>
@@ -2010,23 +2030,14 @@
                                 </svg>
                                 <div>
                                     <p class="text-gray-800 font-bold text-base">Limited stock available</p>
-                                    <p class="text-gray-600 text-sm">अभी ऑर्डर करें</p>
+                                    <p class="text-gray-600 text-base">अभी ऑर्डर करें</p>
                                 </div>
                             </div>
                         </article>
 
                     </div>
 
-                    <!-- Horizontal Offer Strip -->
-                    <div class="mx-6 mb-6">
-                        <div
-                            class="bg-gradient-to-r from-yellow-400 via-orange-500 to-red-500 rounded-2xl p-1 shadow-xl">
-                            <div class="bg-white rounded-xl p-4 text-center">
-                                <p class="text-gray-800 font-bold text-lg">🎁 Offer Section</p>
-                                <p class="text-gray-600 text-sm mt-1">आज का विशेष ऑफर</p>
-                            </div>
-                        </div>
-                    </div>
+              
 
                     <!-- CTA Section -->
                     <div class="px-6 pb-8">
@@ -2084,9 +2095,9 @@
                     </svg>
                 </div>
 
-                <div class="max-w-7xl mx-auto relative z-10">
+                <div class="max-w-7xl  mx-auto relative z-10">
 
-                    <!-- Section Heading -->
+                    <!-- Section Heading-->
                     <div class="text-center mb-8 md:mb-12">
                         <div class="inline-block px-5 py-2 rounded-full mb-5"
                             style="background-color: rgba(255, 255, 255, 0.15);">
@@ -2099,14 +2110,14 @@
                     </div>
 
                     <!-- Certification Cards Grid -->
-                    <div class="grid grid-cols-1 gap-6 md:gap-8 mb-12">
+                    <div class="grid grid-cols-1 gap-6 md:gap-8 mb-12 flex justify-center items-center text-center ">
 
                         <!-- Certification 1: 100% Ayurvedic -->
                         <article class="trust-card site-card p-6">
-                            <div class="badge-icon mx-auto mb-5"
+                            <div class="badge-icon mx-auto mb-5 te"
                                 style="width: 180px; background: linear-gradient(135deg, var(--success) 0%, var(--green-accent) 100%);">
                                 <div class="w-full h-full flex items-center justify-center p-5">
-                                    <img src="./Image/Trust1.png" alt="100% Ayurvedic"
+                                    <img src="./Image/Trust1.avif" alt="100% Ayurvedic"
                                         class="w-full h-full object-contain">
                                 </div>
                             </div>
@@ -2126,7 +2137,7 @@
                             <div class="badge-icon mx-auto mb-5"
                                 style="width: 180px; height: 180px; background: linear-gradient(135deg, var(--primary) 0%, var(--secondary) 100%);">
                                 <div class="w-full h-full flex items-center justify-center p-5">
-                                    <img src="./Image/Trust2.png" alt="GMP Certified"
+                                    <img src="./Image/Trust2.avif" alt="GMP Certified"
                                         class="w-full h-full object-contain">
                                 </div>
                             </div>
@@ -2146,7 +2157,7 @@
                             <div class="badge-icon mx-auto mb-5"
                                 style="width: 180px; height: 180px; background: linear-gradient(135deg, var(--muted) 0%, var(--muted) 100%);">
                                 <div class="w-full h-full flex items-center justify-center p-5">
-                                    <img src="./Image/Trust3.png" alt="ISO Approved"
+                                    <img src="./Image/Trust3.avif" alt="ISO Approved"
                                         class="w-full h-full object-contain">
                                 </div>
                             </div>
@@ -2166,7 +2177,7 @@
                             <div class="badge-icon mx-auto mb-5"
                                 style="width: 180px; height: 180px; background: linear-gradient(135deg, var(--coral-primary) 0%, var(--secondary) 100%);">
                                 <div class="w-full h-full flex items-center justify-center p-5">
-                                    <img src="./Image/Trust4.png" alt="FSSAI Compliant"
+                                    <img src="./Image/Trust4.avif" alt="FSSAI Compliant"
                                         class="w-full h-full object-contain">
                                 </div>
                             </div>
@@ -2186,7 +2197,7 @@
                             <div class="badge-icon mx-auto mb-5"
                                 style="width: 180px; height: 180px; background: linear-gradient(135deg, var(--success) 0%, var(--green-accent) 100%);">
                                 <div class="w-full h-full flex items-center justify-center p-5">
-                                    <img src="./Image/Trust5.png" alt="No Harmful Chemicals"
+                                    <img src="./Image/Trust5.avif" alt="No Harmful Chemicals"
                                         class="w-full h-full object-contain">
                                 </div>
                             </div>
@@ -2205,7 +2216,7 @@
 
                     <!-- Final Trust Statement Block -->
                     <div class="max-w-4xl mx-auto">
-                        <div class="rounded-3xl site-card p-8 md:p-10 text-center"
+                        <div class="rounded-3xl p-8 md:p-10 text-center"
                             style="background: linear-gradient(135deg, var(--text-light) 0%, var(--light) 100%); box-shadow: 0 15px 50px rgba(0, 0, 0, 0.25);">
                             <div class="flex items-center justify-center mb-4">
                                 <svg class="w-12 h-12 mr-3" style="color: var(--success);" fill="currentColor"
@@ -2262,10 +2273,10 @@
                             </div>
                             <div class="step-number flex-1 rounded-2xl p-4 mt-1">
                                 <div class="flex items-center gap-2 mb-2">
-                                    <span class="text-white font-bold text-lg">सुबह</span>
-                                    <span class="text-white text-opacity-70 text-sm">+ शाम</span>
+                                    <span class="text-white font-bold text-lg">सुबह + शाम</span>
+                                    <span class="text-white text-opacity-70 text-sm"></span>
                                 </div>
-                                <p class="text-white text-opacity-90 text-sm">दिन में 2 बार</p>
+                                <p class="text-white text-opacity-90 text-base">दिन में 2 बार</p>
                             </div>
                         </div>
 
@@ -2277,7 +2288,7 @@
                             </div>
                             <div class="step-number flex-1 rounded-2xl p-4 mt-1">
                                 <p class="text-white font-bold text-lg mb-1">भोजन के बाद</p>
-                                <p class="text-white text-opacity-90 text-sm">खाना खाने के तुरंत बाद</p>
+                                <p class="text-white text-opacity-90 text-base">खाना खाने के तुरंत बाद</p>
                             </div>
                         </div>
 
@@ -2289,7 +2300,7 @@
                             </div>
                             <div class="step-number flex-1 rounded-2xl p-4 mt-1">
                                 <p class="text-white font-bold text-lg mb-1">गुनगुने पानी के साथ</p>
-                                <p class="text-white text-opacity-90 text-sm">ठंडा नहीं, गुनगुना पानी</p>
+                                <p class="text-white text-opacity-90 text-base">ठंडा नहीं, गुनगुना पानी</p>
                             </div>
                         </div>
 
@@ -2301,7 +2312,7 @@
                             </div>
                             <div class="step-number flex-1 rounded-2xl p-4 mt-1">
                                 <p class="text-white font-bold text-lg mb-1">30–45 दिन</p>
-                                <p class="text-white text-opacity-90 text-sm">नियमित सेवन जरूरी</p>
+                                <p class="text-white text-opacity-90 text-base">नियमित सेवन जरूरी</p>
                             </div>
                         </div>
 
@@ -2535,11 +2546,11 @@
                             </svg>
                             <div class="relative z-10">
                                 <div class="flex items-start gap-4 mb-4">
-                                    <img src="./Image/Client1.png" alt="Ramesh Singh"
+                                    <img src="./Image/Client1.avif" alt="Ramesh Singh"
                                         class="w-16 h-16 rounded-full object-cover border-4 border-white shadow-md">
                                     <div class="flex-1">
                                         <h3 class="font-bold text-gray-800 text-lg">Ramesh Singh</h3>
-                                        <p class="text-sm text-gray-600">Age 54, उत्तर प्रदेश</p>
+                                        <p class="text-sm text-gray-600">Age 24, उत्तर प्रदेश</p>
                                         <div class="flex gap-1 mt-1">
                                             <svg class="w-4 h-4 star-icon" viewBox="0 0 24 24">
                                                 <path
@@ -2587,7 +2598,7 @@
                             </svg>
                             <div class="relative z-10">
                                 <div class="flex items-start gap-4 mb-4">
-                                    <img src="./Image/Client2.png" alt="Sita Devi"
+                                    <img src="./Image/Client3.avif" alt="Sita Devi"
                                         class="w-16 h-16 rounded-full object-cover border-4 border-white shadow-md">
                                     <div class="flex-1">
                                         <h3 class="font-bold text-gray-800 text-lg">Sita Devi</h3>
@@ -2639,11 +2650,11 @@
                             </svg>
                             <div class="relative z-10">
                                 <div class="flex items-start gap-4 mb-4">
-                                    <img src="./Image/Client3.png" alt="Prakash Kumar"
+                                    <img src="./Image/Client2.avif" alt="Prakash Kumar"
                                         class="w-16 h-16 rounded-full object-cover border-4 border-white shadow-md">
                                     <div class="flex-1">
                                         <h3 class="font-bold text-gray-800 text-lg">Prakash Kumar</h3>
-                                        <p class="text-sm text-gray-600">Age 62, बिहार</p>
+                                        <p class="text-sm text-gray-600">Age 35, बिहार</p>
                                         <div class="flex gap-1 mt-1">
                                             <svg class="w-4 h-4 star-icon" viewBox="0 0 24 24">
                                                 <path
@@ -2736,7 +2747,7 @@
                             </button>
                             <div class="faq-answer px-5 pb-0">
                                 <div class="pl-16 pr-9">
-                                    <p class="text-gray-600 text-sm leading-relaxed">यह बहरापन में Ayurvedic support
+                                    <p class="text-gray-600 text-lg leading-relaxed"> हाँ , यह बहरापन में Ayurvedic support formula
                                         देता है।</p>
                                 </div>
                             </div>
@@ -2763,14 +2774,14 @@
                             </button>
                             <div class="faq-answer px-5 pb-0">
                                 <div class="pl-16 pr-9">
-                                    <p class="text-gray-600 text-sm leading-relaxed">अधिकतर लोगों को बहरापन में 15–30
+                                    <p class="text-gray-600 text-sm leading-relaxed">अधिकतर लोगों को बहरापन में 7–15
                                         दिन में बदलाव महसूस होता है।</p>
                                 </div>
                             </div>
                         </div>
 
                         <!-- FAQ 3 -->
-                        <div class="faq-card bg-white rounded-2xl shadow-md overflow-hidden">
+                        <div class="faq-card bg-white rounded-2xl shadow-md overflow-hidden">`
                             <button onclick="toggleFaq(this)" class="w-full p-5 flex items-center gap-4 text-left">
                                 <div class="flex-shrink-0">
                                     <div class="icon-bg w-12 h-12 rounded-full flex items-center justify-center">
@@ -2790,8 +2801,8 @@
                             </button>
                             <div class="faq-answer px-5 pb-0">
                                 <div class="pl-16 pr-9">
-                                    <p class="text-gray-600 text-sm leading-relaxed">हाँ, यह बहरापन के लिए 100%
-                                        Ayurvedic है।</p>
+                                    <p class="text-gray-600 text-lg leading-relaxed">हाँ, 100%
+                                        Ayurvedic formula से सुरक्षित समाधान बनाया है।</p>
                                 </div>
                             </div>
                         </div>
@@ -2819,7 +2830,7 @@
                             </button>
                             <div class="faq-answer px-5 pb-0">
                                 <div class="pl-16 pr-9">
-                                    <p class="text-gray-600 text-sm leading-relaxed">हाँ, यह बहरापन से जूझ रहे बुज़ुर्गों के लिए safe है।</p>
+                                    <p class="text-gray-600 text-lg leading-relaxed">हाँ, EarCare बच्चों से लेकर बुजुर्गों तक सभी उम्र के लोगों के लिए सुरक्षित है।</p>
                                 </div>
                             </div>
                         </div>
