@@ -885,23 +885,6 @@
             animation: pulse-gentle 1s ease-in-out infinite;
         }
 
-        /* Hero Section Styles */
-        .hero-section {
-            position: relative;
-            margin-top: 80px;
-        }
-
-        .hero-image-container {
-            position: relative;
-            z-index: 1;
-        }
-
-        .hero-image {
-            filter: brightness(1.1) contrast(1.05);
-            width: 100%;
-            height: auto;
-        }
-
         .hero-content-card {
             animation: slideInUp 1s ease-out 0.5s both;
             z-index: 10;
@@ -974,10 +957,6 @@
 
         /* Responsive Design for Hero */
         @media (max-width: 450px) {
-            .hero-image {
-                max-height: 50vh;
-                min-height: 350px;
-            }
 
             .hero-content-card {
                 margin-top: -100px;
@@ -1117,10 +1096,10 @@
             </div>
         </header>
 
-        <main class=" max-w-[450px] mx-auto ">
+        <main class="max-w-full md:max-w-[450px] mx-auto">
 
             <!-- Hero Section -->
-            <section id="hero" class="hero-section w-full h-auto relative overflow-hidden"
+            <section id="hero" class="hero-section  mt-20 w-full h-auto relative overflow-hidden"
                 style="background: linear-gradient(135deg, var(--coral-primary) 0%, var(--primary) 50%, var(--light) 100%);">
 
                 <!-- Background Decorative Elements -->
@@ -1135,10 +1114,10 @@
                 </div>
 
                 <!-- Hero Image Container -->
-                <div class="relative w-full hero-image-container ">
+                <div class="relative w-full ">
                     <div class="w-full overflow-hidden shadow-2xl">
                         <img src="./Image/Hero.avif" alt="Ear Care Hero Image"
-                            class="w-full h-auto object-contain hero-image transition-all duration-700 ease-out">
+                            class="w-full h-auto  hero-image transition-all duration-700 ">
                     </div>
                 </div>
 
